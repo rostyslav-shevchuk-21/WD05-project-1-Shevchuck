@@ -1,0 +1,16 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Главная';
+	- var pageClass = 'content-page';
+
+block content
+	.sticky-footer-wrapper
+		.sticky-footer-content
+			include ../sections/header.pug
+			.container.content-padding
+				.row
+					.col-10.offset-1
+						include ../sections/blog-post.pug
+						include ../sections/form-comment.pug
+		include ../sections/footer.pug

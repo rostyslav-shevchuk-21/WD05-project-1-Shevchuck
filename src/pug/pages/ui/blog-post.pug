@@ -1,0 +1,30 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Пост в блоге - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Пост в блоге
+
+			.section-ui
+				include ../../sections/blog-post.pug
+			pre.
+				include ../../sections/blog-post.pug
+			
+			.title sections/blog-post.pug
+			pre.
+				.blog-post
+					.blog-post-heading-wrapper
+						.blog-post__date 16 Марта 2017
+						h1.blog-post__title Национальный парк Йосемити
+					img(src="../img/blog/post-img.jpg").blog-post__img
+					.blog-post__content
+						p Парк находится в горах #[a(href="#!") Сьерра-Невада] на востоке штата Калифорния и занимает огромную даже для Америки площадь...
+						p Центром парка является долина #[a(href="#!") Йосемити], круглый год переполненная туристами, зато в большей части парка никаких туристов нет...
+
+					.post-nav 
+						+button('Предыдущий пост')
+						+button('Следующий пост')
